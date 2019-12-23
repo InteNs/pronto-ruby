@@ -25,7 +25,8 @@ ENV RUNNERS pronto-rubocop:0.10.0 \
   pronto-scss:0.10.0 \
   pronto-erb_lint:0.1.5
 
-RUN gem install $RUNNERS
+RUN gem install $RUNNERS \
+  rubocop-rails rubocop-minitest
 
 ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:$PATH
 
